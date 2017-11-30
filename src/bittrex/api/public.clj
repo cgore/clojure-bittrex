@@ -17,7 +17,8 @@
 (defn get-market-summaries []
   (public-get "getmarketsummaries"))
 
-(defn get-market-summary [market])
+(defn get-market-summary [market]
+  (public-get (str "getmarketsummary?market=" market)))
 
 (defn get-order-book [market type])
 
