@@ -5,7 +5,8 @@
 (defn get-markets []
   (json/parse-string (:body (client/get "https://bittrex.com/api/v1.1/public/getmarkets"))))
 
-(defn get-currencies [])
+(defn get-currencies []
+  (json/parse-string (:body (client/get "https://bittrex.com/api/v1.1/public/getcurrencies"))))
 
 (defn get-ticker [market])
 
