@@ -10,7 +10,8 @@
 
 (defn get-ticker [market])
 
-(defn get-market-summaries [])
+(defn get-market-summaries []
+  (json/parse-string (:body (client/get "https://bittrex.com/api/v1.1/public/getmarketsummaries"))))
 
 (defn get-market-summary [market])
 
