@@ -22,4 +22,5 @@
 
 (defn get-order-book [market type])
 
-(defn get-market-history [market])
+(defn get-market-history [market]
+  (public-get (str "getmarkethistory?market=" market)))
