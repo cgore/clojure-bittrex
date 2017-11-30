@@ -3,4 +3,5 @@
   :url "https://github.com/cgore/clojure-bittrex"
   :license {:name "BSD-3-Clause"
             :url "https://opensource.org/licenses/BSD-3-Clause"}
-  :dependencies [[org.clojure/clojure "1.8.0"]])
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                 [clj-http "3.7.0"]])
