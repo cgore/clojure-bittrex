@@ -2,16 +2,19 @@
   (:require [cheshire.core :as json]
             [clj-http.client :as client]))
 
+(defn- public-get [tail]
+  (json/parse-string (:body (client/get (str "https://bittrex.com/api/v1.1/public/" tail)))))
+
 (defn get-markets []
-  (json/parse-string (:body (client/get "https://bittrex.com/api/v1.1/public/getmarkets"))))
+  (public-get "getmarkets"))
 
 (defn get-currencies []
-  (json/parse-string (:body (client/get "https://bittrex.com/api/v1.1/public/getcurrencies"))))
+  (public-get "getcurrencies"))
 
 (defn get-ticker [market])
 
 (defn get-market-summaries []
-  (json/parse-string (:body (client/get "https://bittrex.com/api/v1.1/public/getmarketsummaries"))))
+  (public-get "getmarketsummaries"))
 
 (defn get-market-summary [market])
 
