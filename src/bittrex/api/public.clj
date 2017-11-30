@@ -11,7 +11,8 @@
 (defn get-currencies []
   (public-get "getcurrencies"))
 
-(defn get-ticker [market])
+(defn get-ticker [market]
+  (public-get (str "getticker?market=" market)))
 
 (defn get-market-summaries []
   (public-get "getmarketsummaries"))
