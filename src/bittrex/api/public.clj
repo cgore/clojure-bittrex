@@ -1,9 +1,19 @@
 (ns bittrex.api.public
   (:require [cheshire.core :as json]
-            [clj-http.client :as client]))
+            [clj-http.client :as client]
+            [uri.core :as uri]))
 
-(defn- public-get [tail]
-  (json/parse-string (:body (client/get (str "https://bittrex.com/api/v1.1/public/" tail)))))
+(str (uri/map->uri {:scheme "https"
+                    :host "bittrex.com"
+                    :path "/api/v1.1/public/getticker"
+                    :query {:market "BTC-LTC"}}))
+
+(defn- public-get
+  ([tail]
+   (json/parse-string (:body (client/get
+                              (str (uri/map->uri {:scheme "https"
+                                                  :host "bittrex.com"
+                                                  :path (str "/api/v1.1/public/" tail)})))))))
 
 (defn get-markets []
   (public-get "getmarkets"))
