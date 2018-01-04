@@ -8,7 +8,7 @@ The Bittrex API is documented at https://bittrex.com/Home/Api
 
 ## License
 
-Copyright © 2017, Christopher Mark Gore,<br/>
+Copyright © 2017-2018, Christopher Mark Gore,<br/>
 Soli Deo Gloria,<br/>
 All rights reserved.
 
