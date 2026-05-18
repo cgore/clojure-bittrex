@@ -1,9 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
-## [Unreleased]
+## [0.1.2] - 2026-05-18
 ### Changed
 - Add a new arity to `make-widget-async` to provide a different widget shape.
+- Updated to Clojure v1.12.5.
 
 ## [0.1.1] - 2017-11-21
 ### Changed
